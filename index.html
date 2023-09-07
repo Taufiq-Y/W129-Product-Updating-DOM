@@ -43,5 +43,27 @@
             productPrice.textContent = 'Price: ' + price;
         }
     </script>
+
+----------------------------------------------------------------------------
+    Method 2
+
+        <script>
+        const data = [
+            { id: 1, name: 'Product 1', price: 10 },
+            { id: 2, name: 'Product 2', price: 20 },
+            { id: 3, name: 'Product 3', price: 30 }
+        ];
+
+        const productList = document.getElementById('productList');
+
+        for (let i = 0; i < data.length; i++) {
+            const product = data[i];
+            const listItem = document.createElement('li');
+            listItem.textContent = `Product ${product.id}: ${product.name}, Price: $${product.price}`;
+            productList.appendChild(listItem);
+        }
+    </script>
+
+    
 </body>
 </html>
